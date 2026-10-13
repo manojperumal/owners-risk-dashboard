@@ -1,0 +1,51 @@
+/* View options panel — ported from the design's Tweaks panel shell. */
+.twk-launcher {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(250,249,247,.86); color: #29261b;
+  -webkit-backdrop-filter: blur(24px) saturate(160%); backdrop-filter: blur(24px) saturate(160%);
+  border: .5px solid rgba(0,0,0,.08);
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 8px 24px rgba(0,0,0,.18);
+  font: 600 11.5px var(--sm-font-ui);
+}
+.twk-launcher:hover { background: rgba(255,255,255,.95); }
+
+.twk-panel {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60; width: 280px;
+  max-height: calc(100vh - 32px); display: flex; flex-direction: column;
+  background: rgba(250,249,247,.78); color: #29261b;
+  -webkit-backdrop-filter: blur(24px) saturate(160%); backdrop-filter: blur(24px) saturate(160%);
+  border: .5px solid rgba(255,255,255,.6); border-radius: 14px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 12px 40px rgba(0,0,0,.18);
+  font: 11.5px/1.4 ui-sans-serif, system-ui, -apple-system, sans-serif; overflow: hidden;
+}
+.twk-hd { display: flex; align-items: center; justify-content: space-between; padding: 10px 8px 10px 14px; }
+.twk-hd b { font-size: 12px; font-weight: 600; letter-spacing: .01em; }
+.twk-x {
+  appearance: none; border: 0; background: transparent; color: rgba(41,38,27,.55);
+  width: 22px; height: 22px; border-radius: 6px; font-size: 13px; line-height: 1;
+}
+.twk-x:hover { background: rgba(0,0,0,.06); color: #29261b; }
+.twk-body {
+  padding: 2px 14px 14px; display: flex; flex-direction: column; gap: 10px;
+  overflow-y: auto; overflow-x: hidden; min-height: 0;
+  scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.15) transparent;
+}
+.twk-row { display: flex; flex-direction: column; gap: 5px; }
+.twk-lbl { display: flex; justify-content: space-between; align-items: baseline; color: rgba(41,38,27,.72); }
+.twk-lbl > span:first-child { font-weight: 500; }
+.twk-sect {
+  font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: rgba(41,38,27,.45); padding: 10px 0 0;
+}
+.twk-sect:first-child { padding-top: 0; }
+.twk-field {
+  appearance: none; box-sizing: border-box; width: 100%; min-width: 0; height: 26px; padding: 0 22px 0 8px;
+  border: .5px solid rgba(0,0,0,.1); border-radius: 7px;
+  background: rgba(255,255,255,.6) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='rgba(0,0,0,.5)' d='M0 0h10L5 6z'/></svg>") no-repeat right 8px center;
+  color: inherit; font: inherit; outline: none;
+}
+.twk-field:focus { border-color: rgba(0,0,0,.25); background-color: rgba(255,255,255,.85); }
+.twk-note { font: 500 11.5px var(--sm-font-ui); color: #5B6479; margin-top: -4px; line-height: 1.45; }
+.twk-nav { justify-content: flex-start; }
