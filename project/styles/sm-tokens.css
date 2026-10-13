@@ -1,0 +1,209 @@
+/* Safety Mojo — Colors & Type
+   Derived from Figma (node id 1:190 one-pager, 1:954 carousel, plus product screenshots).
+   Primary brand colors are bold royal blue + a pink/magenta accent dot from the logo.
+*/
+
+/* ============ FONTS ============ */
+/* Europa is the primary brand face (foundry: Fontfabric). The user has supplied
+   licensed Europa .otf files so we self-host them below. Jost (Google) is still
+   used for big Futura-style marketing display, and Inter is still used for
+   in-product UI (Avenir substitute).
+*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ---------- Brand colors ---------- */
+  --sm-blue:         #426CF4;   /* Primary — section bars, CTAs, links */
+  --sm-blue-strong:  #2B51CE;   /* Deeper blue — hero gradients */
+  --sm-blue-deep:    #014886;   /* Navy — case-study accents */
+  --sm-blue-ink:     #050C22;   /* Near-black navy — hero backdrops */
+  --sm-blue-bright:  #3A7AFF;   /* Product UI (mobile bg, tabs) */
+  --sm-blue-royal:   #2567FF;   /* Alt product blue */
+
+  --sm-pink:         #D71575;   /* Mojo dot */
+  --sm-pink-warm:    #DB3E26;   /* Mojo brand warm accent (logo gradient stop) */
+
+  /* ---------- Neutrals ---------- */
+  --sm-black:        #000000;
+  --sm-ink:          #181818;   /* Body copy */
+  --sm-ink-2:        #4C4C4C;   /* Secondary copy */
+  --sm-ink-3:        #545659;   /* Tertiary (icons/caption) */
+  --sm-slate:        #4D5766;   /* Muted UI */
+  --sm-hairline:     #E5E7EB;   /* Borders */
+  --sm-hairline-2:   #D9D9DB;   /* Stronger borders */
+  --sm-surface:      #F6F7F9;   /* Card surface */
+  --sm-surface-2:    #FAFBFC;
+  --sm-surface-3:    #F5F5F5;
+  --sm-off-white:    #F3F4F6;
+  --sm-white:        #FFFFFF;
+
+  /* ---------- Semantic ---------- */
+  --sm-success:      #1B9C1B;   /* "GOOD" badges on PTP scorecards */
+  --sm-success-soft: #E6F9E6;
+  --sm-warn:         #FA6A05;   /* "Fair" */
+  --sm-warn-soft:    #FFF4E5;
+  --sm-info-soft:    #E8EDFF;   /* Blue fill behind stats */
+  --sm-info-tint:    #E8F0FF;   /* Case-study hero band */
+
+  /* Product UI (mobile category cards in Ask Mojo screen) */
+  --sm-mint:         #7FE3C1;
+  --sm-sky:          #B9DCF7;
+  --sm-butter:       #F5ECA6;
+  --sm-peach:        #F8C4AE;
+
+  /* ---------- Typography ---------- */
+  --sm-font-display: "Europa", "Outfit", "Jost", ui-sans-serif, system-ui, sans-serif;
+  --sm-font-marketing: "Jost", "Futura", "Europa", ui-sans-serif, sans-serif; /* big marketing titles */
+  --sm-font-body:    "Europa", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --sm-font-ui:      "Inter", "Avenir", "Europa", ui-sans-serif, system-ui, sans-serif; /* product UI */
+  --sm-font-mono:    ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ---------- Scale / radius / shadow ---------- */
+  --sm-r-xs: 4px;
+  --sm-r-sm: 6px;
+  --sm-r-md: 10px;
+  --sm-r-lg: 14px;
+  --sm-r-xl: 20px;
+  --sm-r-pill: 999px;
+
+  --sm-sh-xs: 0 1px 2px rgba(0,0,0,.05);
+  --sm-sh-sm: 0 2px 5px rgba(0,0,0,.05);
+  --sm-sh-md: 0 6px 18px rgba(0,0,0,.08);
+  --sm-sh-lg: 0 18px 48px rgba(0,0,0,.12);
+  --sm-sh-inset: inset 0 0 0 1px var(--sm-hairline);
+
+  --sm-s-1: 4px;  --sm-s-2: 8px;  --sm-s-3: 12px; --sm-s-4: 16px;
+  --sm-s-5: 24px; --sm-s-6: 32px; --sm-s-7: 48px; --sm-s-8: 64px;
+
+  /* ---------- Semantic type ---------- */
+  --sm-h1-size: 64px;   --sm-h1-lh: 1.02; --sm-h1-weight: 800;
+  --sm-h2-size: 44px;   --sm-h2-lh: 1.05; --sm-h2-weight: 700;
+  --sm-h3-size: 28px;   --sm-h3-lh: 1.15; --sm-h3-weight: 700;
+  --sm-h4-size: 20px;   --sm-h4-lh: 1.25; --sm-h4-weight: 700;
+  --sm-eyebrow-size: 12px; --sm-eyebrow-tracking: .12em;
+  --sm-body-size: 16px; --sm-body-lh: 1.55;
+  --sm-small-size: 13px; --sm-small-lh: 1.45;
+  --sm-caption-size: 11px;
+}
+
+/* ============ Semantic classes ============ */
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+.sm-display,
+.sm-h1 {
+  font-family: var(--sm-font-marketing);
+  font-weight: var(--sm-h1-weight);
+  font-size: var(--sm-h1-size);
+  line-height: var(--sm-h1-lh);
+  color: var(--sm-ink);
+  letter-spacing: -.01em;
+}
+.sm-h2 {
+  font-family: var(--sm-font-display);
+  font-weight: var(--sm-h2-weight);
+  font-size: var(--sm-h2-size);
+  line-height: var(--sm-h2-lh);
+  color: var(--sm-ink);
+  letter-spacing: -.005em;
+}
+.sm-h3 {
+  font-family: var(--sm-font-display);
+  font-weight: var(--sm-h3-weight);
+  font-size: var(--sm-h3-size);
+  line-height: var(--sm-h3-lh);
+  color: var(--sm-ink);
+}
+.sm-h4 {
+  font-family: var(--sm-font-display);
+  font-weight: var(--sm-h4-weight);
+  font-size: var(--sm-h4-size);
+  line-height: var(--sm-h4-lh);
+  color: var(--sm-ink);
+}
+.sm-eyebrow {
+  font-family: var(--sm-font-display);
+  font-weight: 700;
+  font-size: var(--sm-eyebrow-size);
+  text-transform: uppercase;
+  letter-spacing: var(--sm-eyebrow-tracking);
+  color: var(--sm-blue);
+}
+.sm-body {
+  font-family: var(--sm-font-body);
+  font-weight: 300;
+  font-size: var(--sm-body-size);
+  line-height: var(--sm-body-lh);
+  color: var(--sm-ink);
+}
+.sm-body-strong {
+  font-family: var(--sm-font-body);
+  font-weight: 700;
+  font-size: var(--sm-body-size);
+  line-height: var(--sm-body-lh);
+  color: var(--sm-ink);
+}
+.sm-small { font-family: var(--sm-font-body); font-size: var(--sm-small-size); line-height: var(--sm-small-lh); color: var(--sm-ink-2); }
+.sm-caption { font-family: var(--sm-font-body); font-size: var(--sm-caption-size); color: var(--sm-ink-3); }
+.sm-ui { font-family: var(--sm-font-ui); font-size: 14px; color: var(--sm-ink); }
+
+/* ============ Atomic components ============ */
+.sm-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--sm-font-display); font-weight: 700; font-size: 15px;
+  padding: 12px 22px; border-radius: var(--sm-r-pill);
+  border: 1px solid transparent; cursor: pointer; transition: background .15s, transform .1s, box-shadow .15s;
+  text-decoration: none;
+}
+.sm-btn-primary   { background: var(--sm-blue); color: #fff; }
+.sm-btn-primary:hover   { background: var(--sm-blue-strong); }
+.sm-btn-primary:active  { transform: translateY(1px); }
+.sm-btn-ghost     { background: transparent; color: var(--sm-ink); border-color: var(--sm-hairline-2); }
+.sm-btn-ghost:hover { background: var(--sm-surface); }
+.sm-btn-dark      { background: var(--sm-black); color: #fff; }
+.sm-btn-dark:hover { background: #1c1c1c; }
+.sm-btn-accent    { background: var(--sm-pink); color: #fff; }
+.sm-btn-accent:hover { background: #b8125f; }
+
+.sm-card {
+  background: var(--sm-white);
+  border: 1px solid var(--sm-hairline);
+  border-radius: var(--sm-r-md);
+  padding: 20px;
+  box-shadow: var(--sm-sh-xs);
+}
+.sm-feature-card {
+  background: var(--sm-surface);
+  border-radius: var(--sm-r-sm);
+  overflow: hidden;
+  position: relative;
+}
+.sm-feature-card::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 8px;
+  background: var(--sm-blue); border-radius: var(--sm-r-sm) var(--sm-r-sm) 0 0;
+}
+
+.sm-badge {
+  display: inline-block; padding: 4px 10px; border-radius: var(--sm-r-xs);
+  font-family: var(--sm-font-ui); font-weight: 600; font-size: 11px; letter-spacing: .04em;
+}
+.sm-badge-good { background: var(--sm-success-soft); color: var(--sm-success); }
+.sm-badge-fair { background: var(--sm-warn-soft);    color: var(--sm-warn); }
+.sm-badge-info { background: var(--sm-info-soft);    color: var(--sm-blue); }
+
+.sm-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: var(--sm-r-pill); font-size: 12px; font-weight: 600;
+  background: var(--sm-white); color: var(--sm-slate); border: 1px solid var(--sm-hairline);
+}
+.sm-chip-active { background: var(--sm-blue-bright); color: #fff; border-color: var(--sm-blue-bright); }
+
+a.sm-link { color: var(--sm-blue); text-decoration: none; }
+a.sm-link:hover { text-decoration: underline; }
+
+hr.sm-rule { border: 0; border-top: 1px solid var(--sm-hairline); margin: 24px 0; }
+
+/* ============ Layout helpers ============ */
+.sm-page-dark { background: var(--sm-black); color: #fff; }
+.sm-page-navy { background: var(--sm-blue-ink); color: #fff; }
+.sm-page-blue { background: var(--sm-blue-bright); color: #fff; }
+.sm-page-white { background: #fff; color: var(--sm-ink); }
