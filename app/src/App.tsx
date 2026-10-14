@@ -26,6 +26,10 @@ export function App() {
 
   return (
     <div className="app-shell">
+      <div className="demo-banner" role="note">
+        <b>Demo data — illustrative only.</b> All figures, incidents and schedules are fictional and do not
+        represent the actual performance of any company named.
+      </div>
       <TopChrome owner={settings.owner} route={route} site={site} sub={sub} />
 
       {route.view === "portfolio" && (

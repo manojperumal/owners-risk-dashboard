@@ -56,7 +56,7 @@ button { font-family: inherit; cursor: pointer; }
   background: #050913;
   color: #fff;
   border-bottom: 1px solid var(--or-line);
-  position: sticky; top: 0; z-index: 50;
+  position: sticky; top: var(--demo-banner-h); z-index: 50;
 }
 .brand {
   display: flex; align-items: center; gap: 10px;
@@ -785,3 +785,14 @@ button { font-family: inherit; cursor: pointer; }
 .mono-id { font: 600 12px var(--sm-font-mono); color: var(--or-light-mute); }
 .legend-key { display: inline-flex; align-items: center; gap: 6px; }
 .legend-key .sw { width: 8px; height: 8px; border-radius: 2px; }
+
+/* ============ Demo-data disclaimer ============ */
+:root { --demo-banner-h: 30px; }
+.demo-banner {
+  position: sticky; top: 0; z-index: 51;
+  height: var(--demo-banner-h); padding: 0 22px;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  background: #F5A524; color: #2A1A00;
+  font: 500 12px var(--sm-font-ui); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.demo-banner b { font-weight: 700; }
